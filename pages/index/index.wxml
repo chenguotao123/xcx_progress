@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<block class="list" wx:for="{{ list }}" wx:key="{{index}}">
+  <view class="header" bindtap="handleTab" data-index="{{index}}">  
+    <view>第{{index+1}}菜单</view>
+    <image src="{{item.isShow?'../../images/up.png':'../../images/down.png'}}"></image>
+  </view>
+  <view class="body {{item.isShow ? 'slidown' : 'slidup'}}" wx:if="{{ item.isShow }}">  
+    <view>我是第{{index+1}}内容</view>
+    <view>我是第{{index+1}}内容</view>
+    <view>我是第{{index+1}}内容</view>
+    <view>我是第{{index+1}}内容</view>
+    <view>我是第{{index+1}}内容</view>
+    <view>我是第{{index+1}}内容</view>
+  </view>
+</block>
